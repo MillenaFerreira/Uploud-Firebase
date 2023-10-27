@@ -1,5 +1,6 @@
 package com.example.upload_firebase
 
+import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -59,6 +60,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.uploadBtn.setOnClickListener {
             uploadImage()
+        }
+
+        binding.showAllBtn.setOnClickListener{
+            startActivity(Intent(this, ImagesActivity::class.java))
         }
     }
 
